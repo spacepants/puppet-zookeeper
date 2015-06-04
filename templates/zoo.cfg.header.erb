@@ -1,0 +1,14 @@
+## MANAGED BY PUPPET
+
+tickTime=<%= @tick_time %>
+initLimit=<%= @init_limit %>
+syncLimit=<%= @sync_limit %>
+dataDir=<%= @data_dir %>
+dataLogDir=<%= @log_dir %>
+clientPort=<%= @client_port %>
+<% if @snap_retain_count -%>
+autopurge.snapRetainCount=<%= @snap_retain_count %>
+<% end -%>
+<% if @purge_interval -%>
+autopurge.purgeInterval=<%= @purge_interval %>
+<% end -%>

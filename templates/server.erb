@@ -1,0 +1,3 @@
+<% @nodes.each_with_index do |node_address, index| -%>
+server.<%= index.to_i.next %>=<%= node_address %>:<%= @peer_port %>:<%= @leader_port %>
+<% end -%>
