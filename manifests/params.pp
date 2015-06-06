@@ -20,7 +20,7 @@ class zookeeper::params {
   $sync_limit        = '5'
   $snap_retain_count = undef
   $purge_interval    = undef
-  $nodes             = [ $server_address ]
+  $ensemble          = [ $server_address ]
   case $::osfamily {
     'Debian', 'RedHat', 'Amazon': {
       $data_dir     = '/var/zookeeper'
