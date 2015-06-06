@@ -25,7 +25,7 @@ class zookeeper::install {
     group   => 'root',
   }
 
-  ::staging::deploy { "zookeeper-${::zookeeper::version}.tar.gz":
+  staging::deploy { "zookeeper-${::zookeeper::version}.tar.gz":
     target  => $::zookeeper::home_dir,
     source  => "${::zookeeper::mirror}/zookeeper-${::zookeeper::version}/zookeeper-${::zookeeper::version}.tar.gz",
     require => File[$::zookeeper::home_dir],
