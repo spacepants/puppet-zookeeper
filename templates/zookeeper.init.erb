@@ -46,9 +46,9 @@ else
 fi
 
 # use POSTIX interface, symlink is followed automatically
-ZOOBIN="<%= @bin_dir %>"
+ZOOBIN="<%= scope.lookupvar('bin_dir') %>"
 ZOOBINDIR="$(cd "${ZOOBIN}"; pwd)"
-ZOO_LOG_DIR="<%= @log_dir %>"
+ZOO_LOG_DIR="<%= scope.lookupvar('log_dir') %>"
 
 if [ -e "$ZOOBIN/../libexec/zkEnv.sh" ]; then
   . "$ZOOBINDIR/../libexec/zkEnv.sh"
