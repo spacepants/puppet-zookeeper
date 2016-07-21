@@ -1,14 +1,14 @@
 ## MANAGED BY PUPPET
 
-tickTime=<%= scope.lookupvar('tick_time') %>
-initLimit=<%= scope.lookupvar('init_limit') %>
-syncLimit=<%= scope.lookupvar('sync_limit') %>
-dataDir=<%= scope.lookupvar('data_dir') %>
-dataLogDir=<%= scope.lookupvar('log_dir') %>
-clientPort=<%= scope.lookupvar('client_port') %>
-<% if scope.lookupvar('snap_retain_count') -%>
-autopurge.snapRetainCount=<%= scope.lookupvar('snap_retain_count') %>
+tickTime=<%= scope['zookeeper::tick_time'] %>
+initLimit=<%= scope['zookeeper::init_limit'] %>
+syncLimit=<%= scope['zookeeper::sync_limit'] %>
+dataDir=<%= scope['zookeeper::data_dir'] %>
+dataLogDir=<%= scope['zookeeper::log_dir'] %>
+clientPort=<%= scope['zookeeper::client_port'] %>
+<% if scope['zookeeper::snap_retain_count'] -%>
+autopurge.snapRetainCount=<%= scope['zookeeper::snap_retain_count'] %>
 <% end -%>
-<% if scope.lookupvar('purge_interval') -%>
-autopurge.purgeInterval=<%= scope.lookupvar('purge_interval') %>
+<% if scope['zookeeper::purge_interval'] -%>
+autopurge.purgeInterval=<%= scope['zookeeper::purge_interval'] %>
 <% end -%>
